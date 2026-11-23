@@ -41,21 +41,68 @@ svg.i { width: 22px; height: 22px; flex: none; }
 .stage__reset { margin-top: 26px; background: none; border: 1px solid rgba(255, 255, 255, .2); color: rgba(255, 255, 255, .7); border-radius: 999px; padding: 8px 16px; font-size: .85rem; }
 .stage__reset:hover { color: #fff; border-color: #fff; }
 .device {
-  width: 390px; height: min(820px, calc(100dvh - 80px)); border-radius: 54px; padding: 12px; position: relative;
+  /* el marco nunca sobresale de la pantalla: el ancho sale de la altura disponible */
+  width: min(390px, calc((100dvh - 80px) * 390 / 820)); aspect-ratio: 390 / 820;
+  border-radius: 13% / 6.2%; padding: 3%; position: relative;
   background: linear-gradient(145deg, #3a2550, #120819); box-shadow: 0 0 0 2px #5a3e73, 0 50px 100px -30px rgba(0, 0, 0, .6), 0 0 120px rgba(226, 72, 158, .2);
 }
-.device .app { border-radius: 42px; }
+.device__screen { position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 10.5% / 5%; }
+.device .app { position: absolute; top: 0; left: 0; width: 390px; height: 800px; transform-origin: 0 0; }
+
+/* barra flotante de la demo (solo móvil a pantalla completa) */
+.demo-bar { display: none; }
+
 @media (max-width: 900px) {
   .stage { display: block; padding: 0; background: var(--cream); }
   .stage__info { display: none; }
-  .device { width: 100%; height: 100dvh; padding: 0; border-radius: 0; box-shadow: none; background: none; }
-  .device .app { border-radius: 0; }
+  .device { width: 100%; height: 100dvh; aspect-ratio: auto; padding: 0; border-radius: 0; box-shadow: none; background: none; }
+  .device__screen { border-radius: 0; overflow: visible; }
+  .device .app { position: relative; width: 100%; height: 100%; transform: none !important; border-radius: 0; }
+  .demo-bar {
+    display: flex; position: fixed; z-index: 60; left: 10px; right: 10px; top: max(8px, env(safe-area-inset-top));
+    justify-content: space-between; align-items: center; gap: 8px; pointer-events: none;
+  }
+  .demo-bar > * { pointer-events: auto; }
+  .demo-bar__exit {
+    display: inline-flex; align-items: center; gap: 4px; min-height: 36px; padding: 0 14px 0 8px; border-radius: 999px;
+    background: var(--night); color: #fff; font-size: .78rem; font-weight: 800; text-decoration: none;
+    box-shadow: 0 6px 16px -6px rgba(28, 13, 43, .6);
+  }
+  .demo-bar__exit svg { width: 18px; height: 18px; }
+  .demo-bar__roles { display: inline-flex; padding: 3px; border-radius: 999px; background: rgba(28, 13, 43, .88); box-shadow: 0 6px 16px -6px rgba(28, 13, 43, .6); }
+  .demo-bar__roles button { border: 0; background: none; color: rgba(255, 255, 255, .75); font-size: .74rem; font-weight: 800; padding: 0 12px; min-height: 30px; border-radius: 999px; }
+  .demo-bar__roles button[aria-pressed="true"] { background: #fff; color: var(--brand-2); }
+  .topbar { padding-top: 58px; }
 }
+body.embed .demo-bar { display: none; }
 body.embed .stage { display: block; padding: 0; background: var(--cream); }
 body.embed .stage__info { display: none; }
-body.embed .device { width: 100%; height: 100dvh; padding: 0; border-radius: 0; box-shadow: none; background: none; }
-body.embed .device .app { border-radius: 0; }
+body.embed .device { width: 100%; height: 100dvh; aspect-ratio: auto; padding: 0; border-radius: 0; box-shadow: none; background: none; }
+body.embed .device__screen { border-radius: 0; overflow: visible; }
+body.embed .device .app { position: relative; width: 100%; height: 100%; transform: none !important; border-radius: 0; }
+body.embed .topbar { padding-top: 50px; }
 
+/* pantallas estrechas (p. ej. dentro del móvil simulado) */
+@media (max-width: 340px) {
+  .screen { padding-left: 12px; padding-right: 12px; }
+  .topbar h2 { font-size: 1.4rem; }
+  .quick { gap: 6px; }
+  .quick button { font-size: .64rem; padding: 10px 2px; }
+  .quick i { width: 34px; height: 34px; }
+  .seg { grid-template-columns: 1fr; }
+  .kids { gap: 8px; }
+  .kid { padding: 10px; }
+  .summary b { font-size: 1.3rem; }
+  .status__now { font-size: 1.3rem; }
+  .status img { width: 96px; }
+  .acts button { font-size: .68rem; }
+  .row2 { grid-template-columns: 1fr; }
+  .tabbar button { font-size: .6rem; }
+  .login h1 { font-size: 1.8rem; }
+}
+@media (max-height: 640px) {
+  .login img { width: 48%; padding-top: 30px; }
+}
 /* ---------- app ---------- */
 .app {
   height: 100%; background: var(--cream); color: var(--ink); overflow: hidden; position: relative;

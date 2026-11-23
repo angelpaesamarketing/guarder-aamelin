@@ -396,12 +396,17 @@
         <a class="btn btn--gold" href="familias.html">Probar la demo a pantalla completa
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a class="btn btn--ghost" href="familias.html?rol=educadora">Ver panel de educadoras</a>
       </div>
     </div>
-    <div class="phone reveal" data-delay="1">
-      <span class="phone__label">Demo interactiva · tócala</span>
-      <iframe src="familias.html?embed=1" title="Demo de la app Rincón de familias" loading="lazy"></iframe>
+    <div class="phone-col reveal" data-delay="1">
+      <div class="demo-roles" role="group" aria-label="Ver la demo como">
+        <button type="button" data-demo-role="familia" aria-pressed="true">Vista familia</button>
+        <button type="button" data-demo-role="educadora" aria-pressed="false">Vista educadora</button>
+      </div>
+      <div class="phone">
+        <span class="phone__label">Demo interactiva · tócala</span>
+        <div class="phone__screen" id="demoScreen"><iframe id="demoFrame" src="familias.html?embed=1" title="Demo de la app Rincón de familias" loading="lazy"></iframe></div>
+      </div>
     </div>
   </div>
 </section>

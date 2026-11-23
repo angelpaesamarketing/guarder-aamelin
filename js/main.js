@@ -195,7 +195,9 @@
     if (moon && !reduce) moon.style.translate = '0 ' + (y * .25) + 'px';
 
     // bruja guía
-    var on = y > heroH * .7;
+    var fam = document.getElementById('familias').getBoundingClientRect();
+    var overDemo = innerWidth < 960 && fam.top < innerHeight * .6 && fam.bottom > innerHeight * .4;
+    var on = y > heroH * .7 && !overDemo;
     guide.classList.toggle('is-on', on);
     if (!on) closeQuick();
 
@@ -346,6 +348,29 @@
   $('#todayDate').textContent = wd >= 1 && wd <= 5
     ? d.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })
     : 'Próximo lunes';
+
+  /* ======================================================
+     DEMO DEL RINCÓN DE FAMILIAS: cambiar de vista sin salir
+     ====================================================== */
+  var demoFrame = $('#demoFrame'), demoScreen = $('#demoScreen');
+  function fitDemo() {
+    var w = demoScreen.clientWidth, h = demoScreen.clientHeight;
+    if (!w) return;
+    var k = w / 390;
+    demoFrame.style.transform = 'scale(' + k + ')';
+    demoFrame.style.height = (h / k) + 'px';
+  }
+  fitDemo();
+  if ('ResizeObserver' in window) new ResizeObserver(fitDemo).observe(demoScreen);
+  else addEventListener('resize', fitDemo);
+  $$('[data-demo-role]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      $$('[data-demo-role]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+      demoFrame.src = 'familias.html?embed=1&rol=' + b.dataset.demoRole;
+      var rc = b.getBoundingClientRect();
+      M.emit(rc.left + rc.width / 2, rc.top + rc.height / 2, { count: 14, speed: 2.5, size: 6 });
+    });
+  });
 
   /* ======================================================
      FORMULARIO DE VISITA

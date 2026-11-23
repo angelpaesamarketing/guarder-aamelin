@@ -481,5 +481,18 @@
   var reset = document.getElementById('reset');
   if (reset) reset.addEventListener('click', function () { S = seed(); save(); tab = 'hoy'; openKid = null; render(); toast('Demo reiniciada'); });
 
+  // en escritorio, la app se dibuja a tamaño de iPhone real y se escala dentro del marco
+  var screenEl = document.getElementById('screen');
+  var full = matchMedia('(max-width: 900px)');
+  function fit() {
+    if (full.matches || document.body.classList.contains('embed') || !screenEl) { app.style.height = ''; return; }
+    var k = screenEl.clientWidth / 390;
+    app.style.transform = 'scale(' + k + ')';
+    app.style.height = (screenEl.clientHeight / k) + 'px';
+  }
+  if ('ResizeObserver' in window && screenEl) new ResizeObserver(fit).observe(screenEl);
+  addEventListener('resize', fit);
+
   render();
+  fit();
 })();

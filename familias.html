@@ -15,7 +15,7 @@
 <body>
   <div class="stage">
     <div class="stage__info">
-      <a class="stage__back" href="index.html">← Volver a la web</a>
+      <a class="stage__back" href="index.html#familias">← Volver a la web</a>
       <div class="stage__eyebrow">Rincón de familias · Demo</div>
       <h1>La guarde y casa, <em>siempre conectadas</em></h1>
       <p>Así funcionaría la app para Amelín. Es una web app: se abre desde el móvil, se puede añadir a la pantalla de inicio y no hay que descargar nada.</p>
@@ -26,8 +26,17 @@
       <p class="stage__tip"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg><span>Prueba: envía un aviso como familia y cambia a la vista educadora. Lo verás en su bandeja. Al revés también: registra la comida o la siesta y aparecerá en la agenda de la familia.</span></p>
       <button class="stage__reset" type="button" id="reset">Reiniciar la demo</button>
     </div>
+    <div class="demo-bar" role="group" aria-label="Controles de la demo">
+      <a class="demo-bar__exit" href="index.html#familias" aria-label="Salir de la demo y volver a la web">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>Salir de la demo
+      </a>
+      <div class="demo-bar__roles">
+        <button type="button" data-role="familia" aria-pressed="true">Familia</button>
+        <button type="button" data-role="educadora" aria-pressed="false">Educadora</button>
+      </div>
+    </div>
     <div class="device">
-      <div class="app" id="app" aria-live="polite"></div>
+      <div class="device__screen" id="screen"><div class="app" id="app" aria-live="polite"></div></div>
     </div>
   </div>
   <script src="js/app.js"></script>
