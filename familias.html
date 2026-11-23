@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rincón de familias · Amelín</title>
+  <meta name="description" content="Demo de la app de comunicación entre familias y educadoras de la Guardería Infantil Amelín.">
+  <meta name="theme-color" content="#1c0d2b">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..600,100;1,9..144,400..600,100&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="stage">
+    <div class="stage__info">
+      <a class="stage__back" href="index.html">← Volver a la web</a>
+      <div class="stage__eyebrow">Rincón de familias · Demo</div>
+      <h1>La guarde y casa, <em>siempre conectadas</em></h1>
+      <p>Así funcionaría la app para Amelín. Es una web app: se abre desde el móvil, se puede añadir a la pantalla de inicio y no hay que descargar nada.</p>
+      <div class="roles" role="group" aria-label="Ver como">
+        <button type="button" data-role="familia" aria-pressed="true">Vista familia</button>
+        <button type="button" data-role="educadora" aria-pressed="false">Vista educadora</button>
+      </div>
+      <p class="stage__tip"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg><span>Prueba: envía un aviso como familia y cambia a la vista educadora. Lo verás en su bandeja. Al revés también: registra la comida o la siesta y aparecerá en la agenda de la familia.</span></p>
+      <button class="stage__reset" type="button" id="reset">Reiniciar la demo</button>
+    </div>
+    <div class="device">
+      <div class="app" id="app" aria-live="polite"></div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>

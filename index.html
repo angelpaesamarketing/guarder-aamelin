@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Guardería Infantil Amelín · Zizur Mayor</title>
+  <meta name="description" content="Guardería infantil en Zizur Mayor (Navarra) para peques de 4 meses a 3 años. Horario flexible de 7:30 a 16:30, horas sueltas, comedor propio con menús de dietista y ludoteca de verano.">
+  <meta name="theme-color" content="#1c0d2b">
+  <link rel="icon" href="assets/img/favicon.png">
+  <meta property="og:title" content="Guardería Infantil Amelín · Zizur Mayor">
+  <meta property="og:description" content="Aquí crecer es pura magia. Peques de 4 meses a 3 años en Zizur Mayor.">
+  <meta property="og:image" content="assets/img/bruja.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/bruja.webp">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ChildCare",
+    "name": "Guardería Infantil Amelín",
+    "telephone": "+34 948 062 159",
+    "email": "info@guarderiaamelin.com",
+    "url": "http://www.guarderiaamelin.com/",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C/ Santa Cruz de Ardoi 13, Bajo",
+      "postalCode": "31180",
+      "addressLocality": "Zizur Mayor",
+      "addressRegion": "Navarra",
+      "addressCountry": "ES"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:30", "closes": "16:30"
+    }]
+  }
+  </script>
+</head>
+<body>
+<script>document.documentElement.className="js";</script>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ INTRO ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <canvas class="intro__stars" id="introStars"></canvas>
+  <div class="intro__word" id="introWord">
+    <span style="color:var(--c-a)">A</span><span style="color:var(--c-m)">m</span><span style="color:var(--c-e)">e</span><span style="color:var(--c-l)">l</span><span style="color:var(--c-i)">í</span><span style="color:var(--c-n)">n</span>
+  </div>
+  <div class="intro__sub">Guardería infantil · Zizur Mayor</div>
+  <button class="intro__skip" id="introSkip" type="button">Saltar intro ›</button>
+</div>
+<img class="flyer" id="flyer" src="assets/img/bruja.webp" alt="" hidden>
+<canvas id="sparkles"></canvas>
+
+<!-- ============ CABECERA ============ -->
+<header class="header" id="header">
+  <div class="wrap header__in">
+    <a class="logo" href="#inicio" aria-label="Amelín, ir al inicio">
+      <img src="assets/img/bruja.png" alt="" width="46" height="44">
+      <span class="logo__word">
+        <span class="logo__name"><b>A</b><b>m</b><b>e</b><b>l</b><b>í</b><b>n</b></span>
+        <span class="logo__tag">Guardería infantil</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#escuela">La escuela</a>
+      <a href="#grupos">Grupos</a>
+      <a href="#horarios">Horarios</a>
+      <a href="#comedor">Comedor</a>
+      <a href="#familias">Familias</a>
+      <a href="#visita">Contacto</a>
+    </nav>
+    <div class="header__cta">
+      <a class="btn btn--ghost btn--sm" href="familias.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform:none"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+        Acceso familias
+      </a>
+      <a class="btn btn--gold btn--sm" href="#visita">Pide una visita</a>
+      <button class="burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer" aria-label="Menú móvil">
+  <a href="#escuela">La escuela</a>
+  <a href="#grupos">Grupos</a>
+  <a href="#horarios">Horarios</a>
+  <a href="#comedor">Comedor</a>
+  <a href="#familias">Rincón de familias</a>
+  <a href="#visita">Contacto</a>
+  <a class="btn btn--gold" href="familias.html">Acceso familias</a>
+</nav>
+
+<main id="inicio">
+
+<!-- ============ HERO ============ -->
+<section class="hero on-dark" aria-label="Presentación">
+  <canvas class="hero__sky" id="heroSky"></canvas>
+  <div class="hero__moon" data-parallax="0.15"></div>
+
+  <div class="wrap hero__grid">
+    <div>
+      <span class="eyebrow fade-up">Zizur Mayor · De 4 meses a 3 años</span>
+      <h1>
+        <span class="line"><span>Aquí crecer</span></span>
+        <span class="line"><span>es <em class="magic">pura magia</em></span></span>
+      </h1>
+      <p class="lead fade-up d1">Una guardería pequeña y cercana donde cada peque aprende a su ritmo: juego, rutinas que dan seguridad, comida casera y un equipo que os conoce por vuestro nombre.</p>
+      <div class="hero__actions fade-up d2">
+        <a class="btn btn--gold" href="#visita">Reserva una visita
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="#escuela">Conoce Amelín</a>
+      </div>
+      <div class="hero__chips fade-up d3">
+        <span class="chip"><i style="--c:var(--c-e)"></i>Matrícula abierta</span>
+        <span class="chip"><i style="--c:var(--c-m)"></i>Horas y días sueltos</span>
+        <span class="chip"><i style="--c:var(--c-a)"></i>Cocina propia</span>
+      </div>
+    </div>
+
+    <div class="hero__witch" id="heroWitch" role="button" tabindex="0" aria-label="Haz clic y la bruja Amelín dará una vuelta" data-parallax="-0.08">
+      <div class="bob"><img id="heroWitchImg" src="assets/img/bruja.webp" alt="La bruja Amelín volando en su escoba con su gato" width="821" height="777"></div>
+      <span class="hint">¡Tócame!</span>
+    </div>
+  </div>
+
+  <svg class="hero__hills" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 120 C 180 60 300 70 460 110 S 760 170 940 120 S 1260 40 1440 90 L1440 220 L0 220Z" fill="#7b4d8f" opacity=".35"/>
+    <path d="M0 160 C 220 100 380 120 560 150 S 900 200 1100 150 S 1340 110 1440 130 L1440 220 L0 220Z" fill="#c8a6e6" opacity=".35"/>
+    <path d="M0 190 C 240 150 480 160 720 185 S 1200 205 1440 170 L1440 220 L0 220Z" fill="#fcf8f3"/>
+  </svg>
+  <a class="hero__scroll" href="#escuela" aria-label="Bajar"><span></span></a>
+</section>
+
+<!-- ============ DATOS RÁPIDOS ============ -->
+<div class="facts">
+  <div class="wrap">
+    <div class="facts__card reveal">
+      <div class="fact">
+        <span class="fact__ico" style="--c:var(--c-a)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <div><strong>7:30 – 16:30</strong><span>Lunes a viernes</span></div>
+      </div>
+      <div class="fact">
+        <span class="fact__ico" style="--c:var(--c-m)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 11a2.5 2.5 0 1 0 0-5M3 20c.8-3 3.2-5 6-5s5.2 2 6 5M16 15c2.3.2 4.2 1.9 5 5"/></svg></span>
+        <div><strong>4 meses – 3 años</strong><span>Grupos por edad y evolución</span></div>
+      </div>
+      <div class="fact">
+        <span class="fact__ico" style="--c:var(--c-l)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6v10H3z"/><path d="M9 20v-6h6v6"/></svg></span>
+        <div><strong>230 m²</strong><span>4 salas con luz natural</span></div>
+      </div>
+      <div class="fact">
+        <span class="fact__ico" style="--c:var(--brand)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+        <div><strong>Zizur Mayor</strong><span>Santa Cruz de Ardoi, 13</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LA ESCUELA ============ -->
+<section class="section" id="escuela">
+  <div class="wrap about">
+    <div class="about__media reveal">
+      <div class="about__photo"><img src="assets/img/classroom.webp" alt="Una educadora juega con un niño en el aula" loading="lazy" data-parallax-img></div>
+      <div class="about__badge" aria-label="Dos diplomadas en Educación Infantil al frente">
+        <svg viewBox="0 0 150 150" aria-hidden="true"><defs><path id="circ" d="M75,75 m-60,0 a60,60 0 1,1 120,0 a60,60 0 1,1 -120,0"/></defs><text font-size="11" font-weight="700" letter-spacing="3.2" fill="#1c0d2b"><textPath href="#circ">EDUCACIÓN INFANTIL · CON MUCHO CARIÑO ·</textPath></text></svg>
+        <div><strong>0–3</strong><small>años</small></div>
+      </div>
+    </div>
+    <div class="about__text">
+      <span class="eyebrow reveal">Nuestra escuela de magia</span>
+      <h2 class="reveal">Un lugar de <em class="magic">plena confianza</em> para sus primeros pasos</h2>
+      <p class="lead reveal">Amelín nace con una idea sencilla: acompañar a cada peque con las metodologías, la estimulación y el cariño que necesita para desarrollar todas sus capacidades.</p>
+      <p class="lead reveal">Somos un equipo dirigido por dos diplomadas en Educación Infantil. Trato personalizado, puertas abiertas a las familias y siempre sitio para nuevas ideas y sugerencias.</p>
+      <div class="values">
+        <div class="value reveal" data-delay="1"><i style="--c:var(--c-a)">♥</i><div><b>Trato a medida</b><span>Cada peque tiene su ritmo y lo respetamos.</span></div></div>
+        <div class="value reveal" data-delay="2"><i style="--c:var(--c-m)">✦</i><div><b>Estimulación</b><span>Lenguaje, motricidad y autonomía.</span></div></div>
+        <div class="value reveal" data-delay="1"><i style="--c:var(--c-l)">☀</i><div><b>Flexibilidad real</b><span>Horas y días sueltos cuando lo necesitéis.</span></div></div>
+        <div class="value reveal" data-delay="2"><i style="--c:var(--brand)">✉</i><div><b>Comunicación diaria</b><span>Sabréis cómo ha ido su día, cada día.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GRUPOS ============ -->
+<section class="section groups-bg" id="grupos">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <span class="eyebrow reveal">Los grupos</span>
+        <h2 class="reveal">De Brujillo a <em class="magic">Mago</em>, paso a paso</h2>
+      </div>
+      <p class="lead reveal">Nos organizamos según las fases de desarrollo de cada peque (lenguaje, motricidad, autonomía…), no solo por la fecha de nacimiento.</p>
+    </div>
+
+    <div class="groups">
+      <article class="group reveal" data-tilt style="--c:var(--c-a)">
+        <div class="group__ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 6h10M21 6v6M27 6v6"/><rect x="15" y="12" width="18" height="30" rx="7"/><path d="M15 22h6M15 29h6"/></svg></div>
+        <span class="group__age">0 – 1 año</span>
+        <h3>Brujillos</h3>
+        <p>Los más peques. Mucho contacto, rutinas tranquilas y estimulación sensorial para que se sientan como en casa.</p>
+        <ul><li>Biberones con agua embotellada</li><li>Purés caseros</li><li>Siesta a demanda</li></ul>
+      </article>
+      <article class="group reveal" data-delay="1" data-tilt style="--c:var(--c-m)">
+        <div class="group__ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12c6-3 11-3 16 1 5-4 10-4 16-1v26c-6-3-11-3-16 1-5-4-10-4-16-1z"/><path d="M24 13v26"/></svg></div>
+        <span class="group__age">1 – 2 años</span>
+        <h3>Aprendices</h3>
+        <p>Primeros pasos, primeras palabras y mucha exploración. Juego guiado, música y psicomotricidad.</p>
+        <ul><li>Psicomotricidad</li><li>Cuentos y canciones</li><li>Autonomía en la mesa</li></ul>
+      </article>
+      <article class="group reveal" data-delay="2" data-tilt style="--c:var(--brand)">
+        <div class="group__ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 40l20-20"/><path d="M34 6l1.6 4.4L40 12l-4.4 1.6L34 18l-1.6-4.4L28 12l4.4-1.6z"/><path d="M14 14l.8 2.2L17 17l-2.2.8L14 20l-.8-2.2L11 17l2.2-.8zM38 26l.8 2.2L41 29l-2.2.8L38 32l-.8-2.2L35 29l2.2-.8z"/></svg></div>
+        <span class="group__age">2 – 3 años</span>
+        <h3>Magos</h3>
+        <p>Preparados para el cole: control de esfínteres, lenguaje, convivencia y talleres de experimentación.</p>
+        <ul><li>Talleres creativos</li><li>Hábitos y autonomía</li><li>Preparación al cole</li></ul>
+      </article>
+      <article class="group reveal" data-delay="3" data-tilt style="--c:var(--c-l)">
+        <div class="group__ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M34 30A15 15 0 0 1 18 10a15 15 0 1 0 16 20z"/><path d="M34 8v6M31 11h6"/></svg></div>
+        <span class="group__age">Horario de tarde</span>
+        <h3>Tardarines</h3>
+        <p>Para las familias que necesitan la tarde: llegada a mediodía, siesta, merienda y juego hasta la recogida.</p>
+        <ul><li>Entrada 13:30</li><li>Merienda incluida</li><li>Salida hasta 16:30</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UN DÍA ============ -->
+<section class="section day on-dark" id="dia" aria-labelledby="dia-t">
+  <canvas class="day__sky" id="daySky"></canvas>
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <span class="eyebrow reveal">Un día en Amelín</span>
+        <h2 class="reveal" id="dia-t">Rutinas que dan <em class="magic">seguridad</em></h2>
+      </div>
+      <p class="lead reveal">Un ritmo amable y previsible, con espacio para jugar, descansar y descubrir. Haz scroll y acompaña a la escoba.</p>
+    </div>
+    <div class="timeline" id="timeline">
+      <div class="timeline__track"><div class="timeline__fill" id="tlFill"></div><img class="timeline__broom" id="tlBroom" src="assets/img/bruja.png" alt=""></div>
+      <ol class="timeline__list">
+        <li class="tl"><time>7:30</time><b>Bienvenida</b><span>Entrada tranquila y juego libre.</span></li>
+        <li class="tl"><time>9:30</time><b>Asamblea</b><span>Nos saludamos, cantamos y miramos el tiempo.</span></li>
+        <li class="tl"><time>10:00</time><b>Almuerzo</b><span>Fruta de temporada.</span></li>
+        <li class="tl"><time>10:30</time><b>Talleres</b><span>Pintura, música, psicomotricidad.</span></li>
+        <li class="tl"><time>12:00</time><b>Comida</b><span>Menú casero de dietista.</span></li>
+        <li class="tl"><time>12:45</time><b>Siesta</b><span>Descanso con música suave.</span></li>
+        <li class="tl"><time>15:00</time><b>Merienda</b><span>Y un ratito de cuento.</span></li>
+        <li class="tl"><time>16:30</time><b>¡A casa!</b><span>Os contamos cómo ha ido el día.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HORARIOS ============ -->
+<section class="section" id="horarios">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <span class="eyebrow reveal">Horarios a vuestra medida</span>
+        <h2 class="reveal">Elegid el que mejor <em class="magic">encaja</em> con vuestra vida</h2>
+      </div>
+      <p class="lead reveal">Hemos adaptado nuestros horarios a lo que nos pedís las familias. Y si un día necesitáis algo distinto, venid por horas sueltas.</p>
+    </div>
+
+    <div class="schedule reveal">
+      <div class="tabs" role="tablist" aria-label="Tipos de horario">
+        <button class="tab" role="tab" id="t-temp" aria-controls="p-temp" aria-selected="true" style="--c:var(--c-l)"><span class="tab__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18h16M7 14a5 5 0 0 1 10 0M12 4v4M5.6 7.6l1.6 1.6M18.4 7.6l-1.6 1.6M2 14h2M20 14h2"/></svg></span><span><b>Tempranero</b><small>Entrada de 7:30 a 9:30</small></span></button>
+        <button class="tab" role="tab" id="t-dorm" aria-controls="p-dorm" aria-selected="false" tabindex="-1" style="--c:var(--brand)"><span class="tab__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h6l-6 6h6M14 4h6l-6 6h6"/></svg></span><span><b>Dormilón</b><small>Entrada a mediodía</small></span></button>
+        <button class="tab" role="tab" id="t-tard" aria-controls="p-tard" aria-selected="false" tabindex="-1" style="--c:var(--c-a)"><span class="tab__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span><span><b>Tardarines</b><small>Entrada a las 13:30</small></span></button>
+        <button class="tab" role="tab" id="t-comb" aria-controls="p-comb" aria-selected="false" tabindex="-1" style="--c:var(--c-m)"><span class="tab__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h4a2 2 0 1 1 4 0h4v4a2 2 0 1 1 0 4v4h-4a2 2 0 1 0-4 0H4v-4a2 2 0 1 0 0-4z"/></svg></span><span><b>Combinado</b><small>Mezcla franjas y días</small></span></button>
+        <button class="tab" role="tab" id="t-suel" aria-controls="p-suel" aria-selected="false" tabindex="-1" style="--c:#e6a800"><span class="tab__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.9 6.9L22 9.6l-5.5 4.7 1.7 7.2L12 17.8 5.8 21.5l1.7-7.2L2 9.6l7.1-.7z"/></svg></span><span><b>Horas sueltas</b><small>Cuando lo necesitéis</small></span></button>
+      </div>
+
+      <div>
+        <div class="panel" role="tabpanel" id="p-temp" aria-labelledby="t-temp" style="--c:var(--c-l)">
+          <h3>Horario Tempranero</h3>
+          <p>Para quienes empiezan pronto el día. Entrada flexible por la mañana y varias opciones de recogida.</p>
+          <div class="dayline" data-in="7.5-9.5" data-stay="9.5-16.5"></div>
+          <div class="io"><div><h4>Entradas</h4><ul><li>7:30 – 9:30</li></ul></div><div><h4>Salidas</h4><ul><li>11:45 o 12:00</li><li>13:30</li><li>15:30 o 16:00</li><li>16:30</li></ul></div></div>
+        </div>
+        <div class="panel" role="tabpanel" id="p-dorm" aria-labelledby="t-dorm" style="--c:var(--brand)" hidden>
+          <h3>Horario Dormilón</h3>
+          <p>Mañanas en casa sin prisas y llegada justo para comer, dormir la siesta y jugar por la tarde.</p>
+          <div class="dayline" data-in="11.75-12" data-stay="12-16.5"></div>
+          <div class="io"><div><h4>Entradas</h4><ul><li>11:45 – 12:00</li></ul></div><div><h4>Salidas</h4><ul><li>15:30 o 16:00</li><li>16:30</li></ul></div></div>
+        </div>
+        <div class="panel" role="tabpanel" id="p-tard" aria-labelledby="t-tard" style="--c:var(--c-a)" hidden>
+          <h3>Tardarines</h3>
+          <p>Grupo especial de tarde: llegan después de comer, siesta, merienda y juego.</p>
+          <div class="dayline" data-in="13.5-13.75" data-stay="13.75-16.5"></div>
+          <div class="io"><div><h4>Entradas</h4><ul><li>13:30</li></ul></div><div><h4>Salidas</h4><ul><li>15:30 o 16:00</li><li>16:30</li></ul></div></div>
+        </div>
+        <div class="panel" role="tabpanel" id="p-comb" aria-labelledby="t-comb" style="--c:var(--c-m)" hidden>
+          <h3>Horario Combinado</h3>
+          <p>¿Turnos que cambian? Combinad franjas y días de la semana. Lo cuadramos juntos.</p>
+          <div class="dayline" data-in="7.5-9.5,11.75-12,13.5-13.75" data-stay="9.5-11.75,12-13.5,13.75-16.5"></div>
+          <div class="io"><div><h4>Entradas</h4><ul><li>Combinables</li></ul></div><div><h4>Salidas</h4><ul><li>Combinables</li></ul></div></div>
+        </div>
+        <div class="panel" role="tabpanel" id="p-suel" aria-labelledby="t-suel" style="--c:#e6a800" hidden>
+          <h3>Días y horas sueltas</h3>
+          <p>Una reunión, un médico, un imprevisto… Reservad horas o días sueltos aunque vuestro peque no venga habitualmente.</p>
+          <div class="dayline" data-in="" data-stay="7.5-16.5"></div>
+          <div class="io"><div><h4>Cómo reservar</h4><ul><li>Llamando</li><li>Desde la app de familias</li></ul></div><div><h4>Disponible</h4><ul><li>Lunes a viernes</li><li>7:30 – 16:30</li></ul></div></div>
+        </div>
+        <p class="schedule__note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg> Todos los horarios incluyen almuerzo, comida o merienda según la franja.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTALACIONES ============ -->
+<section class="section groups-bg" id="instalaciones">
+  <div class="wrap space">
+    <figure class="space__photo reveal" style="margin:0">
+      <img src="assets/img/story.webp" alt="Rincón de juego y lectura" loading="lazy">
+      <figcaption><div><strong>230 m²</strong><span>de escuela</span></div><div><strong>4</strong><span>salas</span></div><div><strong>100%</strong><span>adaptadas</span></div></figcaption>
+    </figure>
+    <div>
+      <span class="eyebrow reveal">Instalaciones</span>
+      <h2 class="reveal" style="margin-top:16px">Pensadas desde <em class="magic">su altura</em></h2>
+      <p class="lead reveal" style="margin-top:20px">Cada detalle está diseñado para su cuidado y bienestar: sin escalones, sin esquinas duras y con mucha luz.</p>
+      <div class="features">
+        <div class="feature reveal" style="--c:var(--c-l)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 3c-2 3 2 4 0 7M12 3c-2 3 2 4 0 7M16 3c-2 3 2 4 0 7M3 15h18M3 20h18"/></svg></i><b>Calefacción por suelo radiante</b></div>
+        <div class="feature reveal" data-delay="1" style="--c:var(--c-m)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 18h18M6 18V9"/></svg></i><b>Suelos al mismo nivel</b></div>
+        <div class="feature reveal" style="--c:var(--c-a)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 21V9a6 6 0 0 1 12 0v12"/><circle cx="15" cy="14" r="1"/></svg></i><b>Puertas redondeadas</b></div>
+        <div class="feature reveal" data-delay="1" style="--c:var(--brand)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 20V10a6 6 0 0 1 6-6h10"/><path d="M8 20v-9a3 3 0 0 1 3-3h9"/></svg></i><b>Esquinas acolchadas</b></div>
+        <div class="feature reveal" style="--c:#2f9bd6"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 12h16v2a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6zM6 12V6a2 2 0 0 1 4 0"/></svg></i><b>Baños adaptados</b></div>
+        <div class="feature reveal" data-delay="1" style="--c:#e6a800"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg></i><b>Grandes ventanales y luz natural</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMEDOR ============ -->
+<section class="section" id="comedor">
+  <div class="wrap">
+    <div class="food reveal">
+      <div style="position:relative;z-index:1">
+        <span class="eyebrow">Comedor propio</span>
+        <h2>Comida casera, <em class="magic">hecha con mimo</em></h2>
+        <p class="lead">Almuerzos, comidas y meriendas elaborados por dietistas y adaptados a cada peque: intolerancias, alergias o cualquier necesidad especial. El agua para biberones, siempre embotellada.</p>
+        <dl class="today" id="todayMenu" aria-live="polite">
+          <header><b>Menú de hoy</b><span id="todayDate"></span></header>
+          <dt>1º</dt><dd id="m1"></dd>
+          <dt>2º</dt><dd id="m2"></dd>
+          <dt>Postre</dt><dd id="m3"></dd>
+        </dl>
+        <div class="food__actions">
+          <a class="btn" href="http://www.guarderiaamelin.com/images/ni%C3%B1os.pdf" target="_blank" rel="noopener">Menú mensual niños</a>
+          <a class="btn btn--ghost" href="http://www.guarderiaamelin.com/images/pures.pdf" target="_blank" rel="noopener">Menú bebés (purés)</a>
+        </div>
+      </div>
+      <img class="food__chef" src="assets/img/cocinero.webp" alt="Ilustración del cocinero de Amelín" loading="lazy">
+    </div>
+
+    <div class="duo">
+      <article class="card-x card-x--sun reveal">
+        <svg class="deco" viewBox="0 0 100 100" aria-hidden="true"><g fill="#fff"><circle cx="50" cy="50" r="20"/><g id="ray"><rect x="47" y="0" width="6" height="22" rx="3"/></g><use href="#ray" transform="rotate(45 50 50)"/><use href="#ray" transform="rotate(90 50 50)"/><use href="#ray" transform="rotate(135 50 50)"/><use href="#ray" transform="rotate(180 50 50)"/><use href="#ray" transform="rotate(225 50 50)"/><use href="#ray" transform="rotate(270 50 50)"/><use href="#ray" transform="rotate(315 50 50)"/></g></svg>
+        <span class="eyebrow">Verano</span>
+        <h3>Ludoteca de verano</h3>
+        <p>Para peques de la guarde y de fuera, hasta los 6 años. Rutinas y actividades especiales para seguir aprendiendo y jugando en compañía.</p>
+        <div class="pills"><span>Julio</span><span>Agosto</span><span>L–V · 7:30 a 16:00</span><span>Días sueltos</span></div>
+        <a class="btn btn--light" href="#visita" data-topic="Ludoteca de verano">Quiero información</a>
+      </article>
+      <article class="card-x card-x--pink reveal" data-delay="1">
+        <svg class="deco" viewBox="0 0 100 100" aria-hidden="true"><path fill="#fff" d="M50 0l9 36 36 9-36 9-9 36-9-36-36-9 36-9z"/></svg>
+        <span class="eyebrow">Para toda la familia</span>
+        <h3>Talleres Amelín</h3>
+        <p>Talleres abiertos a cualquier familia, vengan o no a la guarde: primeros auxilios en la infancia, alimentación, sueño… ¡y abiertos a vuestras ideas!</p>
+        <div class="pills"><span>Plazas limitadas</span><span>Todas las edades</span><span>Profesionales del sector</span></div>
+        <a class="btn btn--light" href="#visita" data-topic="Talleres para familias">Apuntarme al próximo</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAMILIAS ============ -->
+<section class="section families on-dark" id="familias">
+  <div class="wrap families__grid">
+    <div>
+      <span class="eyebrow reveal">Rincón de familias · NUEVO</span>
+      <h2 class="reveal">Todo su día, <em class="magic">en tu bolsillo</em></h2>
+      <p class="lead reveal">Una app web, sin descargas, para que familias y educadoras estéis siempre conectadas. Adiós a las notas en la mochila y a las llamadas a mitad de mañana.</p>
+      <ul class="perks">
+        <li class="perk reveal" style="--c:var(--c-a)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5c3-1.5 5.5-1.5 8 .5 2.5-2 5-2 8-.5v14c-3-1.5-5.5-1.5-8 .5-2.5-2-5-2-8-.5z"/><path d="M12 5.5v14"/></svg></i><div><b>Agenda diaria</b><span>Qué ha comido, cuánto ha dormido, pañales y cómo se ha sentido.</span></div></li>
+        <li class="perk reveal" data-delay="1" style="--c:var(--c-m)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a2 2 0 0 0 3.4 0"/></svg></i><div><b>Avisos en un toque</b><span>Ausencias, retrasos, quién recoge hoy o una medicación.</span></div></li>
+        <li class="perk reveal" data-delay="2" style="--c:var(--c-l)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.8A8 8 0 1 1 21 12z"/></svg></i><div><b>Mensajes con su educadora</b><span>Directo, privado y sin depender del WhatsApp personal.</span></div></li>
+        <li class="perk reveal" data-delay="3" style="--c:var(--brand)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/></svg></i><div><b>Circulares y autorizaciones</b><span>Lee y firma desde el móvil. Menús y calendario siempre a mano.</span></div></li>
+      </ul>
+      <div class="families__actions reveal">
+        <a class="btn btn--gold" href="familias.html">Probar la demo a pantalla completa
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="familias.html?rol=educadora">Ver panel de educadoras</a>
+      </div>
+    </div>
+    <div class="phone reveal" data-delay="1">
+      <span class="phone__label">Demo interactiva · tócala</span>
+      <iframe src="familias.html?embed=1" title="Demo de la app Rincón de familias" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="dudas">
+  <div class="wrap faq">
+    <div class="faq__aside">
+      <span class="eyebrow reveal">Dudas frecuentes</span>
+      <h2 class="reveal" style="margin-top:16px">Lo que más nos <em class="magic">preguntáis</em></h2>
+      <p class="lead reveal" style="margin-top:18px">¿No encuentras tu respuesta? Llámanos y te la resolvemos en un momento.</p>
+      <a class="btn reveal" href="tel:+34948062159">Llamar al 948 062 159</a>
+      <img src="assets/img/calendario.webp" alt="" loading="lazy">
+    </div>
+    <div>
+      <details class="qa reveal" open><summary>¿Desde qué edad podéis acoger a mi peque?</summary><p>Desde los 4 meses y hasta los 3 años. En verano, la ludoteca amplía la edad hasta los 6 años.</p></details>
+      <details class="qa reveal"><summary>¿Puedo llevarle solo algunas horas o días?</summary><p>Sí. Además de nuestros horarios fijos (Tempranero, Dormilón, Tardarines y Combinado) podéis reservar horas y días sueltos.</p></details>
+      <details class="qa reveal"><summary>¿Qué pasa si tiene alergias o intolerancias?</summary><p>Nuestros menús los elaboran dietistas y se adaptan a cada niño o niña: alergias, intolerancias o cualquier patología. Lo hablamos con vosotros desde el primer día.</p></details>
+      <details class="qa reveal"><summary>¿Cómo sabré qué tal ha ido su día?</summary><p>Con el Rincón de familias: cada día recibiréis su agenda (comidas, siesta, pañales, estado de ánimo) y podréis escribir a su educadora directamente.</p></details>
+      <details class="qa reveal"><summary>¿Cómo es el periodo de adaptación?</summary><p>Progresivo y respetuoso, empezando con estancias cortas que se van alargando. Lo planificamos con cada familia según el peque.</p></details>
+      <details class="qa reveal"><summary>¿Puedo visitar la guarde antes de decidir?</summary><p>¡Claro! Reserva una visita en el formulario de abajo y te enseñamos las salas y resolvemos todas tus dudas.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISITA / CONTACTO ============ -->
+<section class="section visit" id="visita">
+  <div class="wrap">
+    <div class="section__head">
+      <div>
+        <span class="eyebrow reveal">Ven a conocernos</span>
+        <h2 class="reveal">Reserva tu <em class="magic">visita</em> en 1 minuto</h2>
+      </div>
+      <p class="lead reveal">Cuéntanos un poco sobre tu peque y te llamamos para confirmar el día. Sin compromiso.</p>
+    </div>
+    <div class="visit__grid">
+      <div class="form reveal" id="visitForm">
+        <form novalidate>
+          <h3>Pedir visita o información</h3>
+          <p>Respondemos en menos de 24 h laborables.</p>
+          <div class="fields">
+            <div class="field"><label for="f-name">Tu nombre</label><input id="f-name" name="nombre" autocomplete="name" required></div>
+            <div class="field"><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel" required></div>
+            <div class="field"><label for="f-kid">Edad del peque</label>
+              <select id="f-kid" name="edad"><option>Aún no ha nacido</option><option>4 – 12 meses</option><option selected>1 – 2 años</option><option>2 – 3 años</option><option>3 – 6 años (ludoteca)</option></select>
+            </div>
+            <div class="field"><label for="f-when">¿Desde cuándo?</label><input id="f-when" name="inicio" type="month"></div>
+            <div class="field field--full"><span style="font-size:.82rem;font-weight:700">Me interesa</span>
+              <div class="slots">
+                <label><input type="checkbox" name="interes" value="Visita" checked><span>Visitar la guarde</span></label>
+                <label><input type="checkbox" name="interes" value="Matrícula"><span>Matrícula</span></label>
+                <label><input type="checkbox" name="interes" value="Horas sueltas"><span>Horas sueltas</span></label>
+                <label><input type="checkbox" name="interes" value="Ludoteca de verano"><span>Ludoteca</span></label>
+                <label><input type="checkbox" name="interes" value="Talleres para familias"><span>Talleres</span></label>
+              </div>
+            </div>
+            <div class="field field--full"><label for="f-msg">Mensaje (opcional)</label><textarea id="f-msg" name="mensaje" placeholder="Horario que necesitáis, alergias, dudas…"></textarea></div>
+          </div>
+          <button class="btn" type="submit">Enviar solicitud
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+        <div class="form__ok" role="status">
+          <img src="assets/img/bruja.png" alt="">
+          <h3>¡Solicitud enviada!</h3>
+          <p>Gracias, <span id="okName"></span>. Te llamaremos muy pronto para cerrar el día de la visita.</p>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="contact__card reveal">
+          <h3>Estamos aquí</h3>
+          <div class="contact__rows">
+            <a href="tel:+34948062159"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></i><span><small>Teléfono</small>948 062 159</span></a>
+            <a href="mailto:info@guarderiaamelin.com"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg></i><span><small>Email</small>info@guarderiaamelin.com</span></a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Calle+Santa+Cruz+de+Ardoi+13+Zizur+Mayor" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></i><span><small>Dirección</small>C/ Santa Cruz de Ardoi 13, Bajo · 31180 Zizur Mayor</span></a>
+            <a href="https://www.facebook.com/Guarderia.Infantil.Amelin" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8V6.5c0-.8.2-1.3 1.4-1.3H17V2.1C16.7 2 15.7 2 14.6 2 12.2 2 10.6 3.4 10.6 6.1V8H8v3.4h2.6V22H14V11.4h2.7L17 8z"/></svg></i><span><small>Facebook</small>Guarderia.Infantil.Amelin</span></a>
+          </div>
+        </div>
+        <div class="map reveal" data-delay="1">
+          <iframe title="Mapa: Guardería Amelín en Zizur Mayor" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=Calle%20Santa%20Cruz%20de%20Ardoi%2013%2C%2031180%20Zizur%20Mayor&z=16&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <img class="footer__witch" src="assets/img/bruja.png" alt="" loading="lazy">
+  <div class="wrap">
+    <div class="footer__big" aria-label="Amelín"><span>A</span><span>m</span><span>e</span><span>l</span><span>í</span><span>n</span></div>
+    <div class="footer__cols">
+      <div>
+        <h4>Guardería Infantil Amelín</h4>
+        <p style="max-width:34ch;font-size:.94rem">Educación infantil de 4 meses a 3 años en Zizur Mayor. Ludoteca de verano hasta los 6 años.</p>
+      </div>
+      <div><h4>La guarde</h4><ul><li><a href="#escuela">Quiénes somos</a></li><li><a href="#grupos">Grupos</a></li><li><a href="#instalaciones">Instalaciones</a></li><li><a href="#comedor">Comedor</a></li></ul></div>
+      <div><h4>Familias</h4><ul><li><a href="familias.html">Acceso familias</a></li><li><a href="#horarios">Horarios</a></li><li><a href="#dudas">Dudas frecuentes</a></li><li><a href="http://www.guarderiaamelin.com/images/calendario.pdf" target="_blank" rel="noopener">Calendario escolar</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="tel:+34948062159">948 062 159</a></li><li><a href="mailto:info@guarderiaamelin.com">info@guarderiaamelin.com</a></li><li>L–V · 7:30 a 16:30</li></ul></div>
+    </div>
+    <div class="footer__legal">
+      <span>© <span id="year"></span> Guardería Infantil Amelín · Zizur Mayor (Navarra)</span>
+      <span><a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BRUJA GUÍA ============ -->
+<button class="guide" id="guide" type="button" aria-label="Accesos rápidos" aria-expanded="false" aria-controls="quick">
+  <img src="assets/img/bruja.png" alt="">
+</button>
+<div class="quick" id="quick" role="menu">
+  <p>¿En qué te ayudo?</p>
+  <a role="menuitem" href="#visita" style="--c:var(--c-e)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></i>Reservar una visita</a>
+  <a role="menuitem" href="tel:+34948062159" style="--c:var(--c-m)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></i>Llamar a la guarde</a>
+  <a role="menuitem" href="familias.html" style="--c:var(--c-a)"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></i>Acceso familias</a>
+</div>
+
+<script src="js/sparkles.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
