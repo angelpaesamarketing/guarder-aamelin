@@ -61,6 +61,7 @@ body {
 }
 
 img { max-width: 100%; height: auto; display: block; }
+[hidden] { display: none !important; }
 a { color: inherit; }
 button { font: inherit; color: inherit; }
 :focus-visible { outline: 3px solid var(--c-e); outline-offset: 3px; border-radius: 6px; }
@@ -806,7 +807,7 @@ section { position: relative; }
 
 /* grano sutil que unifica la página */
 .grain {
-  position: fixed; inset: 0; z-index: 200; pointer-events: none; opacity: .05; mix-blend-mode: multiply;
+  position: fixed; inset: 0; z-index: 200; pointer-events: none; opacity: .035;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 /* sin JS: todo visible */
