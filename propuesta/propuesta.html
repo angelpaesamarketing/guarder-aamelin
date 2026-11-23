@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Propuesta de nueva web · Guardería Infantil Amelín</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..600,100,0..1;1,9..144,400..600,100,0..1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --night: #1c0d2b; --plum: #2f1544; --violet: #57287a; --brand: #7b4d8f;
+    --lilac: #ecdff5; --lilac-2: #f6effa; --cream: #fcf8f3; --ink: #241530; --ink-2: #5b4c66; --line: #e7dcee;
+    --c-a: #e2489e; --c-m: #1f9d63; --c-e: #ffc83a; --c-l: #ff8a3d; --c-i: #c8a6e6; --c-n: #e0245e;
+    --display: "Fraunces", Georgia, serif; --ui: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #ddd; }
+  body { font-family: var(--ui); color: var(--ink); font-size: 10.5pt; line-height: 1.55; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page {
+    width: 210mm; height: 297mm; position: relative; overflow: hidden; background: var(--cream);
+    padding: 20mm 18mm 18mm; page-break-after: always; break-after: page; margin: 0 auto;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+  @media screen { .page { margin: 10mm auto; box-shadow: 0 10px 40px rgba(0,0,0,.2); } }
+
+  h1, h2, h3 { font-family: var(--display); font-weight: 500; font-variation-settings: "SOFT" 100; letter-spacing: -.02em; margin: 0; line-height: 1.05; }
+  h2 { font-size: 30pt; }
+  h3 { font-size: 15pt; letter-spacing: -.01em; }
+  p { margin: 0; }
+  em.m { font-style: italic; font-variation-settings: "SOFT" 100, "WONK" 1; background: linear-gradient(100deg, var(--c-a), var(--c-l) 50%, #f0a800); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .05em; }
+  .dark em.m { background: linear-gradient(100deg, #ff9ad5, var(--c-e)); -webkit-background-clip: text; background-clip: text; }
+  .eyebrow { font-size: 7.5pt; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; color: var(--brand); display: flex; align-items: center; gap: 7px; margin-bottom: 10px; }
+  .eyebrow::before { content: "✦"; font-size: 9pt; }
+  .lead { font-size: 11.5pt; color: var(--ink-2); line-height: 1.6; }
+
+  /* cabecera y pie de página */
+  .run { position: absolute; left: 18mm; right: 18mm; top: 9mm; display: flex; justify-content: space-between; font-size: 7.5pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #a497ad; }
+  .run b { font-family: var(--display); font-style: italic; font-size: 11pt; letter-spacing: 0; text-transform: none; font-weight: 600; }
+  .run b span:nth-child(1){color:var(--c-a)} .run b span:nth-child(2){color:var(--c-m)} .run b span:nth-child(3){color:#e6a800} .run b span:nth-child(4){color:var(--c-l)} .run b span:nth-child(5){color:#a77bd0} .run b span:nth-child(6){color:var(--c-n)}
+  .folio { position: absolute; right: 18mm; bottom: 9mm; font-size: 8pt; color: #a497ad; font-weight: 700; }
+
+  /* ---------- portada ---------- */
+  .cover { background: radial-gradient(70% 50% at 75% 35%, rgba(226,72,158,.28), transparent 70%), linear-gradient(180deg, var(--night), var(--plum) 60%, #4b2266); color: #fff; padding: 22mm 18mm; }
+  .cover .stars { position: absolute; inset: 0; }
+  .cover .moon { position: absolute; right: -30mm; top: 30mm; width: 150mm; height: 150mm; border-radius: 50%; background: radial-gradient(circle at 38% 36%, #fff8dc, #ffe9a6 45%, #f5c96a); box-shadow: 0 0 120px 40px rgba(255,220,140,.25); }
+  .cover .witch { position: absolute; right: 8mm; top: 46mm; width: 135mm; transform: rotate(-4deg); filter: drop-shadow(0 18px 22px rgba(0,0,0,.4)); }
+  .cover .word { font-family: var(--display); font-style: italic; font-weight: 600; font-variation-settings: "SOFT" 100, "WONK" 1; font-size: 24pt; position: relative; }
+  .cover .word span:nth-child(1){color:var(--c-a)} .cover .word span:nth-child(2){color:#3ccf8a} .cover .word span:nth-child(3){color:var(--c-e)} .cover .word span:nth-child(4){color:var(--c-l)} .cover .word span:nth-child(5){color:var(--c-i)} .cover .word span:nth-child(6){color:#ff4f86}
+  .cover .tag { font-size: 7.5pt; letter-spacing: .24em; text-transform: uppercase; opacity: .7; font-weight: 700; margin-top: 2px; position: relative; }
+  .cover .title { position: absolute; left: 18mm; right: 18mm; bottom: 58mm; }
+  .cover .title .eyebrow { color: var(--c-e); }
+  .cover h1 { font-size: 50pt; line-height: .95; letter-spacing: -.035em; font-weight: 450; }
+  .cover .sub { margin-top: 14px; font-size: 12.5pt; color: rgba(255,255,255,.78); max-width: 120mm; }
+  .cover .meta { position: absolute; left: 18mm; right: 18mm; bottom: 18mm; display: flex; gap: 10mm; border-top: 1px solid rgba(255,255,255,.18); padding-top: 6mm; }
+  .cover .meta div small { display: block; font-size: 7pt; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.55); font-weight: 700; }
+  .cover .meta div b { font-size: 10.5pt; font-weight: 600; }
+  .hills { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 50mm; }
+
+  /* ---------- bloques ---------- */
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; }
+  .card { background: #fff; border-radius: 16px; padding: 6mm; box-shadow: 0 4px 16px rgba(47,21,68,.07); }
+  .problems { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; margin-top: 7mm; }
+  .problem { display: grid; grid-template-columns: 9mm 1fr; gap: 4mm; align-items: start; background: #fff; border-radius: 14px; padding: 4mm 5mm; box-shadow: 0 3px 12px rgba(47,21,68,.06); }
+  .problem i { width: 9mm; height: 9mm; border-radius: 8px; display: grid; place-items: center; font-style: normal; font-weight: 800; font-size: 10pt; background: color-mix(in srgb, var(--c) 15%, #fff); color: var(--c); }
+  .problem b { display: block; font-size: 10.5pt; }
+  .problem span { color: var(--ink-2); font-size: 9.5pt; }
+  .goal { border-left: 3px solid var(--c); padding: 1mm 0 1mm 4mm; margin-bottom: 4mm; }
+  .goal b { display: block; font-size: 10.5pt; }
+  .goal span { font-size: 9.5pt; color: var(--ink-2); }
+
+  .shot { border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px -10px rgba(47,21,68,.35); background: #fff; }
+  .shot img { display: block; width: 100%; }
+  .browser { border-radius: 12px; overflow: hidden; box-shadow: 0 14px 36px -12px rgba(28,13,43,.45); background: #fff; }
+  .browser .bar { height: 7mm; background: #efe8f3; display: flex; align-items: center; gap: 5px; padding: 0 4mm; }
+  .browser .bar i { width: 7px; height: 7px; border-radius: 50%; background: #d5c7de; display: block; }
+  .browser .bar span { margin-left: 4mm; font-size: 7pt; color: #8a7f92; background: #fff; border-radius: 6px; padding: 1px 10px; }
+  .browser img { display: block; width: 100%; }
+  .phone { width: 46mm; border-radius: 9mm; padding: 2.2mm; background: #1c0d2b; box-shadow: 0 14px 30px -10px rgba(28,13,43,.5); }
+  .phone img { display: block; width: 100%; border-radius: 7mm; }
+  .caption { font-size: 8pt; color: var(--ink-2); margin-top: 2.5mm; text-align: center; }
+
+  .feat { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 6mm; margin-top: 6mm; }
+  .f { display: grid; grid-template-columns: 8mm 1fr; gap: 3mm; align-items: start; }
+  .f i { width: 8mm; height: 8mm; border-radius: 7px; display: grid; place-items: center; background: color-mix(in srgb, var(--c) 16%, #fff); color: var(--c); font-style: normal; font-size: 9pt; font-weight: 800; }
+  .f b { display: block; font-size: 10pt; line-height: 1.3; }
+  .f span { font-size: 8.8pt; color: var(--ink-2); line-height: 1.45; display: block; }
+
+  .gift { border-radius: 18px; padding: 7mm; position: relative; overflow: hidden; color: #fff; }
+  .gift .ribbon { position: absolute; top: 5mm; right: 5mm; background: var(--c-e); color: var(--night); font-weight: 800; font-size: 7.5pt; letter-spacing: .12em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; }
+  .gift h3 { font-size: 17pt; margin: 2mm 0 3mm; }
+  .gift p { color: rgba(255,255,255,.85); font-size: 9.5pt; }
+  .gift ul { margin: 4mm 0 0; padding: 0; list-style: none; display: grid; gap: 2mm; }
+  .gift li { font-size: 9.3pt; padding-left: 6mm; position: relative; color: #fff; line-height: 1.4; }
+  .gift li::before { content: "✓"; position: absolute; left: 0; font-weight: 800; color: var(--c-e); }
+  .gift--g { background: linear-gradient(150deg, #22a06b, #137049); }
+  .gift--p { background: linear-gradient(150deg, #e2489e, #a8206c); }
+
+  .price { background: linear-gradient(160deg, var(--night), var(--violet)); color: #fff; border-radius: 22px; padding: 9mm; position: relative; overflow: hidden; }
+  .price .amount { font-family: var(--display); font-size: 64pt; font-weight: 500; line-height: .9; letter-spacing: -.04em; }
+  .price .amount small { font-family: var(--ui); font-size: 12pt; font-weight: 600; letter-spacing: 0; opacity: .8; margin-left: 2mm; }
+  .price .note { font-size: 9pt; opacity: .7; margin-top: 2mm; }
+  .price img { position: absolute; right: -6mm; bottom: -6mm; width: 62mm; transform: rotate(-6deg); opacity: .95; }
+  .price .what { font-size: 11pt; margin-top: 5mm; max-width: 100mm; color: rgba(255,255,255,.85); }
+  .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 2mm; }
+  .checks li { font-size: 9.5pt; padding-left: 6mm; position: relative; line-height: 1.4; }
+  .checks li::before { content: "✓"; position: absolute; left: 0; color: var(--c-m); font-weight: 800; }
+  .checks.gold li::before { content: "★"; color: #e6a800; }
+  .x li::before { content: "–"; color: #a497ad; }
+  .mini h4 { font-family: var(--ui); font-size: 7.5pt; letter-spacing: .16em; text-transform: uppercase; color: var(--brand); margin: 0 0 3mm; font-weight: 800; }
+
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-top: 6mm; }
+  .step { background: #fff; border-radius: 14px; padding: 5mm; box-shadow: 0 3px 12px rgba(47,21,68,.06); position: relative; }
+  .step .n { font-family: var(--display); font-size: 22pt; color: var(--c); line-height: 1; }
+  .step b { display: block; font-size: 10pt; margin: 2mm 0 1mm; }
+  .step span { font-size: 8.6pt; color: var(--ink-2); line-height: 1.45; display: block; }
+  .sign { display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; margin-top: 10mm; }
+  .sign div { border-top: 1px solid var(--ink-2); padding-top: 2mm; font-size: 8.5pt; color: var(--ink-2); }
+</style>
+</head>
+<body>
+
+<!-- ===================== 1. PORTADA ===================== -->
+<section class="page cover dark">
+  <svg class="stars" viewBox="0 0 210 297" preserveAspectRatio="none" aria-hidden="true">
+    <g fill="#fff">
+      <circle cx="12" cy="18" r=".35"/><circle cx="40" cy="9" r=".25"/><circle cx="66" cy="28" r=".4"/><circle cx="95" cy="14" r=".3"/><circle cx="120" cy="6" r=".35"/><circle cx="22" cy="62" r=".3"/><circle cx="55" cy="80" r=".25"/><circle cx="84" cy="54" r=".35"/><circle cx="14" cy="120" r=".3"/><circle cx="46" cy="140" r=".35"/><circle cx="78" cy="110" r=".25"/><circle cx="30" cy="170" r=".3"/><circle cx="104" cy="96" r=".3"/><circle cx="198" cy="22" r=".35"/><circle cx="182" cy="8" r=".25"/><circle cx="8" cy="200" r=".3"/><circle cx="60" cy="190" r=".25"/><circle cx="102" cy="160" r=".3"/><circle cx="136" cy="24" r=".3"/>
+    </g>
+    <g fill="#ffe9a6"><path d="M70 40l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/><path d="M28 98l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/><path d="M110 130l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/></g>
+  </svg>
+  <div class="moon"></div>
+  <img class="witch" src="../assets/img/bruja.webp" alt="">
+  <div class="word"><span>A</span><span>m</span><span>e</span><span>l</span><span>í</span><span>n</span></div>
+  <div class="tag">Guardería infantil · Zizur Mayor</div>
+
+  <div class="title">
+    <div class="eyebrow">Propuesta de nueva web</div>
+    <h1>Una web donde<br>crecer es <em class="m">pura magia</em></h1>
+    <p class="sub">Diseño completo de la nueva web de la Guardería Infantil Amelín, pensada para las familias y protagonizada por vuestra bruja.</p>
+  </div>
+  <div class="meta">
+    <div><small>Preparada para</small><b>Guardería Infantil Amelín</b></div>
+    <div><small>Fecha</small><b>Noviembre 2026</b></div>
+    <div><small>Validez</small><b>30 días</b></div>
+  </div>
+</section>
+
+<!-- ===================== 2. PUNTO DE PARTIDA ===================== -->
+<section class="page">
+  <div class="run"><span>Propuesta de nueva web</span><b><span>A</span><span>m</span><span>e</span><span>l</span><span>í</span><span>n</span></b></div>
+  <div class="eyebrow">Punto de partida</div>
+  <h2>Vuestra guarde ha crecido.<br>Vuestra web, <em class="m">todavía no</em>.</h2>
+  <p class="lead" style="margin-top:6mm;max-width:150mm">Amelín es un sitio cercano, flexible y con mucho cariño. Pero cuando una familia de Zizur o de Pamplona busca guardería en el móvil, se encuentra una web de 2015 que todavía no refleja todo eso.</p>
+
+  <div class="problems">
+    <div class="problem" style="--c:var(--c-n)"><i>1</i><div><b>Diseño de 2015, pensado para ordenador</b><span>Hoy la mayoría de las familias buscan desde el móvil. Una web antigua da sensación de centro descuidado, aunque la realidad sea la contraria.</span></div></div>
+    <div class="problem" style="--c:var(--c-l)"><i>2</i><div><b>Información desactualizada</b><span>El calendario publicado es del curso 2023-2024 y la información más útil (horarios, menús) está repartida en imágenes y PDF difíciles de leer.</span></div></div>
+    <div class="problem" style="--c:var(--brand)"><i>3</i><div><b>La bruja, escondida</b><span>Tenéis una mascota con muchísima personalidad que casi no aparece. Es vuestro elemento diferenciador y merece ser la protagonista.</span></div></div>
+    <div class="problem" style="--c:var(--c-m)"><i>4</i><div><b>Poca visibilidad en Google</b><span>Sin títulos, descripciones ni datos para Google, es difícil aparecer cuando alguien busca «guardería en Zizur Mayor».</span></div></div>
+  </div>
+
+  <div class="two" style="margin-top:8mm">
+    <div>
+      <div class="eyebrow">Objetivos</div>
+      <h3 style="margin-bottom:5mm">Qué queremos conseguir</h3>
+      <div class="goal" style="--c:var(--c-a)"><b>Enamorar a primera vista</b><span>Que en 3 segundos se sienta que Amelín es un lugar especial.</span></div>
+      <div class="goal" style="--c:var(--c-m)"><b>Responder antes de que pregunten</b><span>Horarios, edades, comedor y servicios de un vistazo.</span></div>
+      <div class="goal" style="--c:var(--c-l)"><b>Conseguir más visitas al centro</b><span>Llamar o pedir visita en un toque, desde cualquier móvil.</span></div>
+      <div class="goal" style="--c:var(--brand)"><b>Aparecer en Google</b><span>En las búsquedas de familias de Zizur, Cizur y Pamplona.</span></div>
+    </div>
+    <div>
+      <div class="shot" style="margin-top:12mm"><img src="img/intro.jpg" alt="Intro animada de la nueva web"></div>
+      <p class="caption">Así se abre la nueva web: la bruja cruza la pantalla y escribe «Amelín» con estrellas.</p>
+    </div>
+  </div>
+  <div class="folio">2</div>
+</section>
+
+<!-- ===================== 3. LA NUEVA WEB ===================== -->
+<section class="page">
+  <div class="run"><span>Propuesta de nueva web</span><b><span>A</span><span>m</span><span>e</span><span>l</span><span>í</span><span>n</span></b></div>
+  <div class="eyebrow">La propuesta</div>
+  <h2>Una web única, con la bruja<br>como <em class="m">protagonista</em></h2>
+  <p class="lead" style="margin-top:5mm;max-width:160mm">Nada de plantillas. Un diseño hecho a medida con los colores de vuestro rótulo, animaciones suaves y toda la información que buscan los padres, ordenada y fácil de encontrar.</p>
+
+  <div class="browser" style="margin-top:7mm">
+    <div class="bar"><i></i><i></i><i></i><span>guarderiaamelin.com</span></div>
+    <img src="img/hero.jpg" alt="Portada de la nueva web">
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 46mm;gap:8mm;margin-top:8mm;align-items:start">
+    <div class="feat" style="margin-top:0">
+      <div class="f" style="--c:var(--brand)"><i>✦</i><div><b>Intro animada</b><span>La bruja vuela de lado a lado al entrar, dejando una estela de estrellas.</span></div></div>
+      <div class="f" style="--c:var(--c-a)"><i>✦</i><div><b>Bruja interactiva</b><span>Flota sobre la luna y, si la tocas, da una voltereta mágica.</span></div></div>
+      <div class="f" style="--c:var(--c-m)"><i>✦</i><div><b>Pensada para el móvil</b><span>Se ve perfecta en cualquier teléfono, tablet u ordenador.</span></div></div>
+      <div class="f" style="--c:var(--c-l)"><i>✦</i><div><b>Bruja guía</b><span>Acompaña al bajar y ofrece accesos rápidos: llamar o pedir visita.</span></div></div>
+      <div class="f" style="--c:#e6a800"><i>✦</i><div><b>Rápida y ligera</b><span>Carga en segundos y no depende de plugins que haya que actualizar.</span></div></div>
+      <div class="f" style="--c:var(--c-n)"><i>✦</i><div><b>Vuestra identidad</b><span>Los colores A·M·E·L·Í·N, la luna y el cielo de noche de la bruja.</span></div></div>
+    </div>
+    <div><div class="phone"><img src="img/movil-hero.jpg" alt="La web en el móvil"></div><p class="caption">Versión móvil</p></div>
+  </div>
+  <div class="folio">3</div>
+</section>
+
+<!-- ===================== 4. SECCIONES ===================== -->
+<section class="page">
+  <div class="run"><span>Propuesta de nueva web</span><b><span>A</span><span>m</span><span>e</span><span>l</span><span>í</span><span>n</span></b></div>
+  <div class="eyebrow">Contenido de la web</div>
+  <h2>Todo lo que buscan<br>las familias, <em class="m">a mano</em></h2>
+
+  <div class="two" style="margin-top:7mm;align-items:start">
+    <div>
+      <div class="shot"><img src="img/grupos.jpg" alt="Sección de grupos"></div>
+      <p class="caption">Los grupos: Brujillos, Aprendices, Magos y Tardarines.</p>
+    </div>
+    <div>
+      <div class="shot"><img src="img/comedor.jpg" alt="Sección de comedor, ludoteca y talleres"></div>
+      <p class="caption">Comedor con el menú del día, ludoteca de verano y talleres.</p>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 46mm;gap:8mm;margin-top:7mm;align-items:start">
+    <div>
+      <h3 style="margin-bottom:4mm">Secciones incluidas</h3>
+      <div class="feat" style="margin-top:0;gap:3.2mm 6mm">
+        <div class="f" style="--c:var(--brand)"><i>1</i><div><b>Portada y presentación</b><span>Quiénes sois, el equipo y vuestros valores.</span></div></div>
+        <div class="f" style="--c:var(--c-a)"><i>2</i><div><b>Grupos por edades</b><span>De 4 meses a 3 años, con lo que hace cada grupo.</span></div></div>
+        <div class="f" style="--c:var(--c-m)"><i>3</i><div><b>Un día en Amelín</b><span>La rutina diaria, que la escoba recorre al hacer scroll.</span></div></div>
+        <div class="f" style="--c:var(--c-l)"><i>4</i><div><b>Horarios interactivos</b><span>Tempranero, Dormilón, Tardarines, Combinado y horas sueltas.</span></div></div>
+        <div class="f" style="--c:#2f9bd6"><i>5</i><div><b>Instalaciones</b><span>230 m², 4 salas y todos los detalles de seguridad.</span></div></div>
+        <div class="f" style="--c:#e6a800"><i>6</i><div><b>Comedor y menús</b><span>Menú del día y descarga de los menús mensuales.</span></div></div>
+        <div class="f" style="--c:var(--c-m)"><i>7</i><div><b>Ludoteca y talleres</b><span>Verano hasta 6 años y talleres abiertos a familias.</span></div></div>
+        <div class="f" style="--c:var(--c-n)"><i>8</i><div><b>Preguntas frecuentes</b><span>Adaptación, alergias, horas sueltas, visitas…</span></div></div>
+        <div class="f" style="--c:var(--brand)"><i>9</i><div><b>Pedir visita y contacto</b><span>Formulario, llamada en un toque, mapa y Facebook.</span></div></div>
+        <div class="f" style="--c:var(--c-a)"><i>10</i><div><b>Textos legales</b><span>Aviso legal, privacidad y cookies.</span></div></div>
+      </div>
+    </div>
+    <div><div class="phone"><img src="img/movil-horarios.jpg" alt="Horarios en el móvil"></div><p class="caption">Horarios en el móvil</p></div>
+  </div>
+  <div class="folio">4</div>
+</section>
+
+<!-- ===================== 5. DE REGALO ===================== -->
+<section class="page">
+  <div class="run"><span>Propuesta de nueva web</span><b><span>A</span><span>m</span><span>e</span><span>l</span><span>í</span><span>n</span></b></div>
+  <div class="eyebrow">De regalo</div>
+  <h2>Y para que os encuentren,<br><em class="m">dos regalos</em></h2>
+  <p class="lead" style="margin-top:5mm;max-width:160mm">Una web bonita sirve de poco si nadie llega a ella. Por eso, junto con la web, os dejo preparado Google para que las familias de la zona os encuentren.</p>
+
+  <div class="two" style="margin-top:8mm">
+    <div class="gift gift--g">
+      <span class="ribbon">Regalo</span>
+      <div class="eyebrow" style="color:#bff3d9">Google Maps</div>
+      <h3>Optimización de la ficha de Google</h3>
+      <p>Es lo primero que ven los padres al buscar «guardería» en Google o en Maps. Dejaremos vuestra ficha completa y atractiva.</p>
+      <ul>
+        <li>Categorías, servicios y descripción optimizados</li>
+        <li>Horarios, teléfono, dirección y enlace a la nueva web revisados</li>
+        <li>Organización de las fotos del centro</li>
+        <li>Botones de llamar y cómo llegar bien configurados</li>
+        <li>Pautas para pedir y responder reseñas</li>
+      </ul>
+    </div>
+    <div class="gift gift--p">
+      <span class="ribbon">Regalo</span>
+      <div class="eyebrow" style="color:#ffd6ec">Buscadores</div>
+      <h3>SEO básico</h3>
+      <p>La web saldrá preparada para que Google la entienda y la muestre a quien busca guardería en vuestra zona.</p>
+      <ul>
+        <li>Títulos y descripciones para cada sección</li>
+        <li>Palabras clave locales: Zizur Mayor, Cizur, Pamplona</li>
+        <li>Datos estructurados de guardería (dirección, horario, teléfono)</li>
+        <li>Alta en Google Search Console y mapa del sitio</li>
+        <li>Web rápida, adaptada a móvil e imágenes optimizadas</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:8mm;display:grid;grid-template-columns:24mm 1fr;gap:6mm;align-items:center">
+    <img src="../assets/img/bruja.png" alt="" style="width:24mm">
+    <div>
+      <h3 style="font-size:13pt;margin-bottom:1.5mm">El resultado: más familias que os conocen, y más visitas al centro</h3>
+      <p style="color:var(--ink-2);font-size:9.5pt">Ficha de Google, web y botón de «Pedir visita» trabajan juntos: la familia os encuentra, ve un sitio bonito y cuidado, y os llama en un toque.</p>
+    </div>
+  </div>
+  <div class="folio">5</div>
+</section>
+
+<!-- ===================== 6. INVERSIÓN ===================== -->
+<section class="page">
+  <div class="run"><span>Propuesta de nueva web</span><b><span>A</span><span>m</span><span>e</span><span>l</span><span>í</span><span>n</span></b></div>
+  <div class="eyebrow">Inversión</div>
+  <h2>Una web completa,<br>a un precio <em class="m">muy asequible</em></h2>
+
+  <div class="price" style="margin-top:7mm">
+    <div class="eyebrow" style="color:var(--c-e)">Web completa + regalos</div>
+    <div class="amount">450 €<small>IVA no incluido</small></div>
+    <p class="note">Pago único · sin cuotas mensuales obligatorias</p>
+    <p class="what">Diseño y desarrollo de la web a medida, publicada en vuestro dominio, con la optimización de la ficha de Google y el SEO básico de regalo.</p>
+    <img src="../assets/img/bruja.png" alt="">
+  </div>
+
+  <div class="two" style="margin-top:8mm">
+    <div class="mini">
+      <h4>Incluido</h4>
+      <ul class="checks">
+        <li>Diseño exclusivo con la bruja Amelín y animaciones</li>
+        <li>Las 10 secciones descritas en esta propuesta</li>
+        <li>Adaptación a móvil, tablet y ordenador</li>
+        <li>Formulario de visita conectado a vuestro email</li>
+        <li>Publicación en guarderiaamelin.com</li>
+        <li>Alojamiento sin coste mensual</li>
+        <li>Una ronda de cambios antes de publicar</li>
+      </ul>
+      <h4 style="margin-top:6mm">De regalo</h4>
+      <ul class="checks gold">
+        <li>Optimización de la ficha de Google</li>
+        <li>SEO básico de la web</li>
+      </ul>
+    </div>
+    <div class="mini">
+      <h4>Forma de pago</h4>
+      <ul class="checks">
+        <li>50 % al aceptar la propuesta</li>
+        <li>50 % al publicar la web</li>
+      </ul>
+      <h4 style="margin-top:6mm">Plazo</h4>
+      <p style="font-size:9.5pt;color:var(--ink-2)">2 a 3 semanas desde que recibamos las fotos y los textos revisados.</p>
+      <h4 style="margin-top:6mm">No incluido</h4>
+      <ul class="checks x">
+        <li>Renovación anual del dominio (como hasta ahora)</li>
+        <li>Sesión de fotos profesional</li>
+        <li>App o área privada de comunicación con las familias</li>
+      </ul>
+    </div>
+  </div>
+  <div class="folio">6</div>
+</section>
+
+<!-- ===================== 7. PRÓXIMOS PASOS ===================== -->
+<section class="page">
+  <div class="run"><span>Propuesta de nueva web</span><b><span>A</span><span>m</span><span>e</span><span>l</span><span>í</span><span>n</span></b></div>
+  <div class="eyebrow">Próximos pasos</div>
+  <h2>¿Empezamos a <em class="m">volar</em>?</h2>
+  <p class="lead" style="margin-top:5mm;max-width:160mm">Es muy sencillo. En unas pocas semanas podéis tener la nueva web publicada y vuestra ficha de Google a punto para el próximo periodo de matrícula.</p>
+
+  <div class="steps">
+    <div class="step" style="--c:var(--c-a)"><div class="n">01</div><b>Aceptación</b><span>Firmáis esta propuesta y se abona el 50 %.</span></div>
+    <div class="step" style="--c:var(--c-m)"><div class="n">02</div><b>Material</b><span>Nos pasáis fotos del centro, revisáis textos y horarios, y nos dais acceso a la ficha de Google.</span></div>
+    <div class="step" style="--c:var(--c-l)"><div class="n">03</div><b>Revisión</b><span>Os enseñamos la web terminada y hacemos los ajustes que necesitéis.</span></div>
+    <div class="step" style="--c:var(--brand)"><div class="n">04</div><b>¡Publicada!</b><span>La web sale en guarderiaamelin.com y dejamos Google configurado.</span></div>
+  </div>
+
+  <div class="two" style="margin-top:10mm;align-items:center">
+    <div class="card">
+      <h3 style="font-size:13pt;margin-bottom:3mm">Qué necesitaremos</h3>
+      <ul class="checks">
+        <li>8–15 fotos de las salas, el patio y el día a día (sin caras de los peques o con autorización)</li>
+        <li>Revisión de textos, horarios y servicios</li>
+        <li>Menús y calendario escolar actuales</li>
+        <li>Acceso al dominio y a la ficha de Google</li>
+      </ul>
+    </div>
+    <div style="text-align:center">
+      <img src="../assets/img/bruja.webp" alt="" style="width:70mm;margin:0 auto">
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:10mm">
+    <h3 style="font-size:13pt;margin-bottom:2mm">Aceptación de la propuesta</h3>
+    <p style="font-size:9pt;color:var(--ink-2)">Propuesta válida durante 30 días desde su fecha. Al firmar, Guardería Infantil Amelín acepta el alcance, el precio (450 € + IVA) y la forma de pago descritos.</p>
+    <div class="sign">
+      <div>Firma y sello · Guardería Infantil Amelín</div>
+      <div>Fecha</div>
+    </div>
+  </div>
+  <div class="folio">7</div>
+</section>
+
+</body>
+</html>
